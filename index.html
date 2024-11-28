@@ -1,7 +1,286 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programmierung Cheatsheet</title>
+  <style>
+    /* Grundstil */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      color: #333;
+    }
+
+    /* Überschriften */
+    h1, h2 {
+      color: #0056b3;
+    }
+
+    /* Codeblock */
+    pre, code {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      display: block;
+      overflow-x: auto;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    /* Tabellenstil */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #0056b3;
+      color: #fff;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <h1>Programmierung Cheatsheet</h1>
+
+  <!-- HTML Section -->
+  <div class="section">
+    <h2>HTML</h2>
+    <table>
+      <tr>
+        <th>HTML-Tag</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><code>&lt;!-- &lt;Kommentar&gt; --&gt;</code></td>
+        <td>Kommentar im HTML-Dokument.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;!DOCTYPE html&gt;</code></td>
+        <td>Definiert den Dokumenttyp.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;html&gt;</code></td>
+        <td>Wurzelelement eines HTML-Dokuments.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;head&gt;</code></td>
+        <td>Enthält Metadaten und Links zu Stylesheets oder Skripten.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;title&gt;</code></td>
+        <td>Legt den Seitentitel fest.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;style&gt;</code></td>
+        <td>Enthält Inline-CSS.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;link rel="stylesheet" href="&lt;Pfad&gt;"&gt;</code></td>
+        <td>Bindet ein externes Stylesheet ein.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;meta charset="utf-8"&gt;</code></td>
+        <td>Setzt die Zeichencodierung.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;script&gt;</code></td>
+        <td>Bindet JavaScript ein.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;body&gt;</code></td>
+        <td>Enthält den sichtbaren Inhalt einer Webseite.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;h1&gt; | &lt;h2&gt; | &lt;h3&gt;</code></td>
+        <td>Überschriften in verschiedenen Hierarchieebenen.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;p&gt;</code></td>
+        <td>Ein Absatz.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;span&gt;</code></td>
+        <td>Inline-Container für Text oder andere Elemente.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;div&gt;</code></td>
+        <td>Block-Container für Inhalte.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;br&gt;</code></td>
+        <td>Zeilenumbruch.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;a href="&lt;Pfad&gt;"&gt;</code></td>
+        <td>Erstellt einen Hyperlink.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;img src="&lt;Pfad&gt;" alt="&lt;Beschreibung&gt;"&gt;</code></td>
+        <td>Fügt ein Bild mit alternativem Text hinzu.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;ul&gt; | &lt;ol&gt;</code></td>
+        <td>Ungeordnete (ul) oder geordnete (ol) Liste.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;li&gt;</code></td>
+        <td>Listenelement.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;table&gt;</code></td>
+        <td>Erstellt eine Tabelle.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;tr&gt; &lt;th&gt; | &lt;td&gt;</code></td>
+        <td>Tabellenzeile (tr), Headerzelle (th) und Datenzelle (td).</td>
+      </tr>
+      <tr>
+        <td><code>&lt;form action="&lt;URL&gt;"&gt;</code></td>
+        <td>Erstellt ein Formular, das an eine URL gesendet wird.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;input type"button|checkbox|radio|submit|number|usw."&gt;</code></td>
+        <td>Fügt ein Eingabefeld ein.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;label for="&lt;Id&gt;"&gt;</code></td>
+        <td>Beschriftung für ein Eingabefeld.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;select&gt; &lt;option&gt;</code></td>
+        <td>Dropdown-Menü mit Auswahloptionen.</td>
+      </tr>
+      <tr>
+        <td><code>&lt;button&gt;</code></td>
+        <td>Erstellt einen klickbaren Button.</td>
+      </tr>
+      <tr>
+        <th>Allgemeine HTML Attribute</th>
+        <td>name, value, required</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- CSS Section -->
+  <div class="section">
+    <h2>CSS</h2>
+    <table>
+      <tr>
+        <th>Selectors</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><code>&lt;HTML-Tag&gt;</code></td>
+        <td>Alle Elemente des Typs auswählen.</td>
+      </tr>
+      <tr>
+        <td><code>#</code></td>
+        <td>Class mehrer Elemente auswählen.</td>
+      </tr>
+      <tr>
+        <td><code>.</code></td>
+        <td>ID eines Elements auswählen.</td>
+      </tr>
+      <tr>
+        <th>CSS-Eigenschaft</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><code>/* Kommentar */</code></td>
+        <td>Ein CSS Kommentar.</td>
+      </tr>
+      <tr>
+        <td><code>background-color</code></td>
+        <td>Hintergrundfarbe eines Elements.</td>
+      </tr>
+      <tr>
+        <td><code>color</code></td>
+        <td>Textfarbe eines Elements.</td>
+      </tr>
+      <tr>
+        <td><code>text-align | align-content left|right|center</code></td>
+        <td>Textausrichtung oder Inhalt-Ausrichtung.</td>
+      </tr>
+      <tr>
+        <td><code>border</code></td>
+        <td>Rahmen eines Elements.</td>
+      </tr>
+      <tr>
+        <td><code>float left|right</code></td>
+        <td>Elementausrichtung (linksbündig, rechtsbündig).</td>
+      </tr>
+      <tr>
+        <td><code>clear none</code></td>
+        <td>Floats aufheben.</td>
+      </tr>
+      <tr>
+        <td><code>@media</code></td>
+        <td>Medienabfragen (screen, print).</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- JavaScript Section -->
+  <div class="section">
+    <h2>JavaScript</h2>
+    <table>
+      <tr>
+        <th>JavaScript-Funktion</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><code>alert("Text")</code></td>
+        <td>Zeigt eine Warnmeldung an.</td>
+      </tr>
+      <tr>
+        <td><code>var variable = prompt("Label");</code></td>
+        <td>Fragt den Benutzer nach einer Eingabe.</td>
+      </tr>
+      <tr>
+        <td><code>document.getElementById("Id")</code></td>
+        <td>Greift auf ein HTML-Element mit einer bestimmten ID zu.</td>
+      </tr>
+      <tr>
+        <td><code>document.createElement("Tag")</code></td>
+        <td>Erstellt ein neues HTML-Element.</td>
+      </tr>
+      <tr>
+        <td><code>setAttribute("Attribut", "Wert")</code></td>
+        <td>Setzt ein Attribut und dessen Wert für ein Element.</td>
+      </tr>
+      <tr>
+        <td><code>removeAttribute("Attribut")</code></td>
+        <td>Entfernt ein Attribut von einem Element.</td>
+      </tr>
+      <tr>
+        <td><code>appendChild(ChildElement)</code></td>
+        <td>Hängt ein Kind-Element an ein Element an.</td>
+      </tr>
+      <tr>
+        <td><code>removeChild(ChildElement)</code></td>
+        <td>Entfernt ein Kind-Element von einem Element.</td>
+      </tr>
+      <tr>
+        <td><code>innerText</code></td>
+        <td>Liest oder setzt den Textinhalt eines Elements.</td>
+      </tr>
+      <tr>
+        <td><code>parentNode</code></td>
+        <td>Greift auf das übergeordnete Element zu.</td>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>
