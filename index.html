@@ -6,7 +6,6 @@
     <title>Programmierung Cheatsheet</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
     <style>
         /* Grundstil */
         body {
@@ -55,7 +54,7 @@
     </style>
 </head>
 <body>
-    <h1>Programmierung Cheatsheet - Stand: 21.01.2025</h1>
+    <h1>Programmierung Cheatsheet - Stand: 08.02.2025</h1>
     <!-- HTML Section -->
     <div class="section">
         <h2>HTML</h2>
@@ -162,7 +161,7 @@
             </tr>
             <tr>
                 <td><code>&lt;input type"button|checkbox|radio|submit|hidden|number|usw."&gt;</code></td>
-                <td>Fügt ein Eingabefeld ein. Siehe <a href="https://www.w3schools.com/html/html_form_input_types.asp">https://www.w3schools.com/html/html_form_input_types.asp</td>
+                <td>Fügt ein Eingabefeld ein. Siehe <a href="https://www.w3schools.com/html/html_form_input_types.asp">https://www.w3schools.com/html/html_form_input_types.asp</a></td>
             </tr>
             <tr>
                 <td><code>&lt;label for="&lt;Id&gt;"&gt;</code></td>
@@ -197,7 +196,7 @@
             </tr>
             <tr>
                 <td><code>.</code></td>
-                <td>Class mehrer Elemente auswählen.</td>
+                <td>Class mehrerer Elemente auswählen.</td>
             </tr>
             <tr>
                 <td><code>#</code></td>
@@ -257,7 +256,7 @@
             </tr>
             <tr>
                 <td><code>padding-top|right|bottom|left</code></td>
-                <td>Einseitiger innerre Abstand eines Elements.</td>
+                <td>Einseitiger innerer Abstand eines Elements.</td>
             </tr>
             <tr>
                 <td><code>height</code></td>
@@ -376,6 +375,7 @@
         <h1>Dynamische Seite mit Buttons, Keypresses & Scrollen</h1>
         <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 
+&lt;html&gt;
 &lt;head&gt;
     &lt;script&gt;
         //Jetzt ausgewählte Seite
@@ -385,21 +385,21 @@
 
         //Funktion zum direkt auswählen einer Seite
         function selectPage(seite) {
-            //Jetztige Seite auswählen und dann verstecken
-            document.getElementById("seite" + currentIndex).setAttribute("style", "display: none");
+            //Jetzige Seite auswählen und dann verstecken
+            document.getElementById("seite" + currentIndex).style.display = "none";
             //Zielseite auswählen und dann zeigen
-            document.getElementById("seite" + seite).setAttribute("style", "display: inline");
+            document.getElementById("seite" + seite).style.display = "block";
             //Jetzige Seite updaten
             currentIndex = seite;
         }
 
-        //Funktion zum durchschalten von Seiten
+        //Funktion zum Durchschalten von Seiten
         function cyclePage() {
             //Jetzige Seite auswählen und dann verstecken
-            document.getElementById("seite" + currentIndex).setAttribute("style", "display: none");
+            document.getElementById("seite" + currentIndex).style.display = "none";
             //Sind wir am Ende?
             if (currentIndex &lt; maxIndex) {
-                //Wenn nein, dann nächste seite asuwählen
+                //Wenn nein, dann nächste seite auswählen
                 currentIndex++;
             //Falls nicht:
             } else {
@@ -407,7 +407,7 @@
                 currentIndex = 1;
             }
             //Ausgewählte Seite anzeigen
-            document.getElementById("seite" + currentIndex).setAttribute("style", "display: inline");
+            document.getElementById("seite" + currentIndex).style.display = "block";
         }
     &lt;/script&gt;
 &lt;/head&gt;
@@ -415,19 +415,19 @@
 &lt;!-- onkeypress: Wenn eine Taste gedrückt wird - onwheel: Wenn das Mausrad verwendet wird --&gt;
 &lt;body onkeypress=&quot;cyclePage()&quot; onwheel=&quot;cyclePage()&quot;&gt;
     &lt;div&gt;
-        &lt;!-- Buttons, die selectPage aufrufen um auf die Zielseite aufzurufen --&gt;
+        &lt;!-- Buttons, die selectPage aufrufen, um auf die Zielseite aufzurufen --&gt;
         &lt;button onclick=&quot;selectPage(1)&quot;&gt;Seite 1&lt;/button&gt;
         &lt;button onclick=&quot;selectPage(2)&quot;&gt;Seite 2&lt;/button&gt;
         &lt;button onclick=&quot;selectPage(3)&quot;&gt;Seite 3&lt;/button&gt;
         &lt;button onclick=&quot;selectPage(4)&quot;&gt;Seite 4&lt;/button&gt;
     &lt;/div&gt;
-    &lt;!-- Hier ist der Inhalt der eigentlichen Präsentation --&gt;
+    &lt;!-- Hier ist der Inhalt der eigentlichen Seiten --&gt;
     &lt;div&gt;
-        &lt;!-- Erste Folie --&gt;
+        &lt;!-- Erste Seite --&gt;
         &lt;div id=&quot;seite1&quot;&gt;
             Test1
         &lt;/div&gt;
-        &lt;!-- Zweite Folie (Versteckt) --&gt;
+        &lt;!-- Zweite Seite (Versteckt) --&gt;
         &lt;div id=&quot;seite2&quot; style=&quot;display:none&quot;&gt;
             Test2
         &lt;/div&gt;
