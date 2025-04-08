@@ -11,6 +11,10 @@
             margin: 20px;
             color: #333;
             word-break: break-all;
+            @media (prefers-color-scheme: dark) {
+                background-color: #181818;
+                color: white;
+            }
         }
 
         /* Überschriften */
@@ -18,9 +22,18 @@
             color: #ff5ad7;
         }
 
+        a {
+            @media (prefers-color-scheme: dark) {
+                color: #66FFFF;
+            }
+        }
+
         /* Codeblock */
         pre, code {
             background-color: #f4f4f4;
+            @media (prefers-color-scheme: dark) {
+                background-color: #696969;
+            }
             padding: 10px;
             border-radius: 5px;
             display: block;
