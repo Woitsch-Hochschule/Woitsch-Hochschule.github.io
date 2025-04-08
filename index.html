@@ -2,10 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programmierung Cheatsheet</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <style>
         /* Grundstil */
         body {
@@ -13,7 +10,7 @@
             line-height: 1.6;
             margin: 20px;
             color: #333;
-            background-color: #fffffe;
+            word-break: break-all;
         }
 
         /* Überschriften */
@@ -469,76 +466,6 @@
                 <td>Beendet eine Funktion und gibt den Rückgabewert an den Aufruf zurück.</td>
             </tr>
         </table>
-    </div>
-    <div>
-        <h1>Dynamische Seite mit Buttons, Keypresses & Scrollen</h1>
-        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-
-&lt;html&gt;
-&lt;head&gt;
-    &lt;script&gt;
-        //Jetzt ausgewählte Seite
-        currentIndex = 1;
-        //Letzte Seite
-        maxIndex = 4;
-
-        //Funktion zum direkt auswählen einer Seite
-        function selectPage(seite) {
-            //Jetzige Seite auswählen und dann verstecken
-            document.getElementById("seite" + currentIndex).style.display = "none";
-            //Zielseite auswählen und dann zeigen
-            document.getElementById("seite" + seite).style.display = "block";
-            //Jetzige Seite updaten
-            currentIndex = seite;
-        }
-
-        //Funktion zum Durchschalten von Seiten
-        function cyclePage() {
-            //Jetzige Seite auswählen und dann verstecken
-            document.getElementById("seite" + currentIndex).style.display = "none";
-            //Sind wir am Ende?
-            if (currentIndex &lt; maxIndex) {
-                //Wenn nein, dann nächste seite auswählen
-                currentIndex++;
-            //Falls nicht:
-            } else {
-                //Erste Seite auswählen
-                currentIndex = 1;
-            }
-            //Ausgewählte Seite anzeigen
-            document.getElementById("seite" + currentIndex).style.display = "block";
-        }
-    &lt;/script&gt;
-&lt;/head&gt;
-
-&lt;!-- onkeypress: Wenn eine Taste gedrückt wird - onwheel: Wenn das Mausrad verwendet wird --&gt;
-&lt;body onkeypress=&quot;cyclePage()&quot; onwheel=&quot;cyclePage()&quot;&gt;
-    &lt;div&gt;
-        &lt;!-- Buttons, die selectPage aufrufen, um auf die Zielseite aufzurufen --&gt;
-        &lt;button onclick=&quot;selectPage(1)&quot;&gt;Seite 1&lt;/button&gt;
-        &lt;button onclick=&quot;selectPage(2)&quot;&gt;Seite 2&lt;/button&gt;
-        &lt;button onclick=&quot;selectPage(3)&quot;&gt;Seite 3&lt;/button&gt;
-        &lt;button onclick=&quot;selectPage(4)&quot;&gt;Seite 4&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;!-- Hier ist der Inhalt der eigentlichen Seiten --&gt;
-    &lt;div&gt;
-        &lt;!-- Erste Seite --&gt;
-        &lt;div id=&quot;seite1&quot;&gt;
-            Test1
-        &lt;/div&gt;
-        &lt;!-- Zweite Seite (Versteckt) --&gt;
-        &lt;div id=&quot;seite2&quot; style=&quot;display:none&quot;&gt;
-            Test2
-        &lt;/div&gt;
-        &lt;div id=&quot;seite3&quot; style=&quot;display:none&quot;&gt;
-            Test3
-        &lt;/div&gt;
-        &lt;div id=&quot;seite4&quot; style=&quot;display:none&quot;&gt;
-            Test4
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
     </div>
 </body>
 </html>
