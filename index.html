@@ -65,7 +65,7 @@
     </style>
 </head>
 <body>
-    <h1>Programmierung Cheatsheet - Stand: 08.04.2025</h1>
+    <h1>Programmierung Cheatsheet - Stand: 17.04.2025</h1>
     <!-- HTML Section -->
     <div class="section">
         <h2>HTML</h2>
@@ -439,6 +439,10 @@
                 <td>Gibt die Länge des Strings oder die Anzahl der Items im Objekt zurück.</td>
             </tr>
             <tr>
+                <td><code>isinstance(&lt;Variable&gt;, &lt;Typ&gt;|(&lt;Typ1&gt;,&lt;Typ2&gt;,usw.))</code></td>
+                <td>Gibt True zurück, wenn die Variable von den angegebenen Typ(en) ist.</td>
+            </tr>
+            <tr>
                 <th>Kontrollstrukturen</th>
                 <th>Beschreibung</th>
             </tr>
@@ -477,6 +481,18 @@
             <tr>
                 <td><code>return &lt;Rückgabewert&gt;</code></td>
                 <td>Beendet eine Funktion und gibt den Rückgabewert an den Aufruf zurück.</td>
+            </tr>
+            <tr>
+                <td><code>raise &lt;Exception&gt;(&lt;Exceptiontext&gt;)</code></td>
+                <td>Wirft die Exception mit dem angegebenen Text.</td>
+            </tr>
+            <tr>
+                <td><code>try:</code></td>
+                <td>Fängt alle Exceptions in dem folgenden Block. Muss mit mindestens 1 except block verbunden sein.</td>
+            </tr>
+            <tr>
+                <td><code>except &lt;Exception-Typ&gt; &lt;Variable&gt;:</code></td>
+                <td>Wird ausgeführt, wenn die aufgefange Exception den entsprechenden Typ hat. Variable ist optional.</td>
             </tr>
         </table>
     </div>
